@@ -11,7 +11,7 @@ CHESSRAND::~CHESSRAND()
 
 }
 
-void CHESSRAND::GetRandPic()
+void CHESSRAND::GetRandPic()//算计分配棋子
 {
 	srand((unsigned)time(NULL));
 	for (int x = 1; x < 9; x++)
@@ -40,13 +40,13 @@ void CHESSRAND::GetRandPic()
 	}
 }
 
-bool CHESSRAND::Clear()
+bool CHESSRAND::Clear()//清除棋盘上的棋子
 {
 	memset(m_ChessId, 0, sizeof(m_ChessId));
 	return true;
 }
 
-bool CHESSRAND::IsEmpty()
+bool CHESSRAND::IsEmpty()//判断棋盘是否为空
 {
 	for (int x = 1; x < 9; x++)
 	{

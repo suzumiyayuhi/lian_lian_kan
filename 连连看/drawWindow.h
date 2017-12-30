@@ -16,6 +16,7 @@ struct DRAWWINDOW
 	DRAWWINDOW();													//构造函数
 	~DRAWWINDOW();													//析构函数
 	void DrawGameMap(HWND hWnd,int timeLength,int score);			//绘制游戏界面的一些功能性组件
+	void DrawTimeBar(HWND hWnd, int timeLength);					//绘制游戏时间条
 	void DrawSelected(int x, int y, int val, bool mark);			//绘制棋子选中效果
 	void DrawInterface(const TCHAR *picPath);						//绘制界面
 	void GetPic(int val[10][16]);									//随机分布棋子
