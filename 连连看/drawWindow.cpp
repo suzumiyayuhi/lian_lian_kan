@@ -115,10 +115,6 @@ void DRAWWINDOW::DrawGameMap(HWND hWnd, int timeLength, int score)//绘制游戏界面
 		}
 	}
 
-	int tscore = score;
-	int tem = int(tscore / 200);
-	if (tscore >= 1200)
-		tem = 0;
 	BitBlt(m_hdc, 0, 0, 900, 600, bgDC, 0, 0, SRCCOPY);
 
 	DeleteObject(allBitmap);
@@ -148,7 +144,7 @@ void DRAWWINDOW::DrawSelected(int x, int y, int val, bool mark)//绘制选中的方块
 	}
 }
 
-void DRAWWINDOW::DrawInterface(const TCHAR* picPath)//绘制普通界面
+void DRAWWINDOW::DrawInterface(const TCHAR* picPath)//绘制普通界面背景图
 {
 	HDC bgDC = CreateCompatibleDC(m_hdc);
 	BITMAP temBmp;
